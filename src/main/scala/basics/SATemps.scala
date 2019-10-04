@@ -44,12 +44,13 @@ object SATemps{
         val medMonthlyPrecip = monthGroup.mapValues(m=>m.sortBy(_.percip).apply(m.length/2).percip)
         
         println("medMonthlyPrecip"+medMonthlyPrecip.toSeq.sortBy(_._1).foreach(println))
-        
+        /*
         val cg = ColorGradient(1946.0 -> RedARGB, 1975.0->BlueARGB, 2014.0->GreenARGB)
         val sizes = data.map(_.precip *2 +2)
         val tempByDayPlot = Plot.simple(
             ScatterStyle(data.map(_.doy), data.map(_.tave), symbolWidth = 3, symbolHeight = 3, colors = cg(data.map(_.year))), 
             "SA Temps","Day of Year", "Temp")
         SwingRenderer(tempByDayPlot, 800, 800, true)
+        */
     }
 }
